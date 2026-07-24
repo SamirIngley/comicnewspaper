@@ -1,2 +1,3 @@
-# [comicnewspaper](comicnewspaper.com)
+# Comic Newspaper
+[website link](https://comicnewspaper.com)
 
