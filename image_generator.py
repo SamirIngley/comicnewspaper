@@ -45,7 +45,6 @@ def parse_news(news_raw):
         raw_article_data = [source, headline, description, url, urlToImage, paragraph]
 
         clean_article_data = [item for item in raw_article_data if item is not None]
-        
         parsed_news[number] = clean_article_data
         number += 1
 

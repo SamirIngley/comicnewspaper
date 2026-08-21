@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Comic Newspaper</title>
+
+<link rel="icon" href="/favicon-c-globe.ico">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-c-globe-96x96.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-c-globe-48x48.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500&display=swap" rel="stylesheet">
@@ -97,7 +102,12 @@
   footer a{ color:#17171a; text-decoration:none; border-bottom:1px solid #17171a; }
   footer a:hover{ color:#9a9aa2; border-color:#9a9aa2; }
 </style>
+<script>
+  const TIME_ZONE = 'America/Los_Angeles';
+  console.log("Timezone: ", TIME_ZONE)
+</script>
 </head>
+
 <body>
 
   <div class="wrap">
@@ -125,13 +135,25 @@
                    S 8 140, 5 6 Z"/>
         </svg>
         <div class="viewport" id="vp">
-          <img class="comic-img" id="img" src="image.png"
+          <img class="comic-img" id="img"
                alt="Today's news drawn as one detailed scene"
                onerror="document.getElementById('vp').style.display='none';document.getElementById('ph').style.display='flex';">
         </div>
+
+        <script>
+          const datePart = new Intl.DateTimeFormat('en-CA', {
+              timeZone: TIME_ZONE,
+              year: 'numeric', month: '2-digit', day: '2-digit'
+            }).format(new Date());
+          const dailyFileName = `daily-ai-images/ai-image-${datePart}.png`;
+  
+          document.getElementById("img").src = dailyFileName;
+          console.log("file date: ", dailyFileName);
+        </script>
+
         <div class="placeholder" id="ph">
-          <div>Today's edition is being drawn.</div>
-          <div>Save your image as <code>image.png</code> in this folder.</div>
+          <div>Can't find image. Unexpected error.</div>
+          <div>Please reach out to me samir.ingle7@gmail.com</div>
         </div>
       </div>
     </figure>
@@ -143,8 +165,12 @@
   </footer>
 
 <script>
-document.getElementById('dateline').textContent =
-  new Date().toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+const dateline = new Date().toLocaleDateString('en-US', {
+      timeZone: TIME_ZONE,
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+    });
+document.getElementById('dateline').textContent = dateline;
+console.log("line date: ", dateline);
 
 (function(){
   var vp = document.getElementById('vp');

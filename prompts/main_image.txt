@@ -1,13 +1,13 @@
 You are an artist. 
-Create an image in the Wimmbelbilder style with microplots of the news articles I provide. 
+Create an image consisting of Wimmbelbilder microplots of the news articles I provide.
 The details of the image are as follows: 
 the image should be realistic, the image should be in high definition,
 the image should be one cohesive image with each microplot coexisting, 
 each news article should have a clear and distinct microplot in the image, 
 try to match the events to a relevant place in the image, 
 don't add numbers to each microplot,
-use text to improve clarity when helpful, 
-only use real words. 
+use text to improve clarity when helpful but
+only use real words from the headline and/or the article. 
 Be creative in how these different microplots interact or mesh in the image.
 Focus on the image being detailed, clear, and accurate.
 Each news article will be numbered and separated by semicolon.
