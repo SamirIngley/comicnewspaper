@@ -23,7 +23,11 @@ def image_filename():
     month = today.strftime('%m')
     day = today.strftime('%d')
 
+<<<<<<< HEAD
     daily_file_name = f"daily-ai-images/ai-image-{year}-{month}-{day}.png"
+=======
+    daily_file_name = f"image-{year}-{month}-{day}.png"
+>>>>>>> f82efb83a06ef3ddcf1ffd71459702c97f114e08
     return daily_file_name
 
 

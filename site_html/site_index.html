@@ -135,7 +135,11 @@
                    S 8 140, 5 6 Z"/>
         </svg>
         <div class="viewport" id="vp">
+<<<<<<< HEAD
           <img class="comic-img" id="img"
+=======
+          <img class="comic-img" id="img" src="image-YYYY-MM-DD.png"
+>>>>>>> f82efb83a06ef3ddcf1ffd71459702c97f114e08
                alt="Today's news drawn as one detailed scene"
                onerror="document.getElementById('vp').style.display='none';document.getElementById('ph').style.display='flex';">
         </div>
@@ -145,7 +149,11 @@
               timeZone: TIME_ZONE,
               year: 'numeric', month: '2-digit', day: '2-digit'
             }).format(new Date());
+<<<<<<< HEAD
           const dailyFileName = `daily-ai-images/ai-image-${datePart}.png`;
+=======
+          const dailyFileName = `image-${datePart}.png`;
+>>>>>>> f82efb83a06ef3ddcf1ffd71459702c97f114e08
   
           document.getElementById("img").src = dailyFileName;
           console.log("file date: ", dailyFileName);
